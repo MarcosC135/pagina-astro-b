@@ -19,116 +19,146 @@ const { title } = Astro.props;
 	<body>
 		<header>
 			<div class="top-header container">
-				<img src="https://http2.mlstatic.com/frontend-assets/ml-web-navigation/ui-navigation/6.6.82/mercadolibre/logo_large_25years_v2.png">
+				<img
+					src="https://http2.mlstatic.com/frontend-assets/ml-web-navigation/ui-navigation/6.6.82/mercadolibre/logo_large_25years_v2.png"
+				/>
 				<div class="input">
 					<input placeholder="Buscar productos..." />
 					<button>
-						<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-						<path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
-					  </svg>
-					  </button>
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							fill="none"
+							viewBox="0 0 24 24"
+							stroke-width="1.5"
+							stroke="currentColor"
+							class="size-6"
+						>
+							<path
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"
+							></path>
+						</svg>
+					</button>
 				</div>
 				<span>Publicidad</span>
 			</div>
-
 		</header>
-	    <div class="banner">
+		<div class="to-60% from-[#f5f106] to-[#f1efef] h-72 bg-gradient-to-b"></div>
 
-	    </div>
-		<div class="container cards">
-			<div class="card">
-				1
-			</div>
-			<div class="card">
-				2
-			</div>
-			<div class="card">
-				3
-			</div>
-			<div class="card">
-				4
-			</div>
-			<div class="card">
-				5
-			</div>
-			<div class="card">
-				6
-			</div>
+		<div class="container cards max-w-[1200px] max-auto">
+			<div class="card">1</div>
+			<div class="card">2</div>
+			<div class="card">3</div>
+			<div class="card">4</div>
+			<div class="card">5</div>
+			<div class="card">6</div>
+		</div>
+		<div
+			class="group transition-colors hover:bg-blue-600 hover:cursor-pointer rounded inline-flex items-center px-4 py-2 text-white bg-blue-500"
+		>
+			<svg
+				xmlns="http://www.w3.org/2000/svg"
+				fill="none"
+				viewBox="0 0 24 24"
+				stroke-width="1.5"
+				stroke="currentColor"
+				class="size-4 mr-1 mt-1 group-hover:animate-spin"
+			>
+				<path
+					stroke-linecap="round"
+					stroke-linejoin="round"
+					d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0 3.181 3.183a8.25 8.25 0 0 0 13.803-3.7M4.031 9.865a8.25 8.25 0 0 1 13.803-3.7l3.181 3.182m0-4.991v4.99"
+				></path>
+			</svg>
+
+			Presioname!
+			<svg
+				xmlns="http://www.w3.org/2000/svg"
+				fill="none"
+				viewBox="0 0 24 24"
+				stroke-width="1.5"
+				stroke="currentColor"
+				class="size-4 mt-[4px] ml-1"
+			>
+				<path
+					stroke-linecap="round"
+					stroke-linejoin="round"
+					d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"></path>
+			</svg>
 		</div>
 		<!-- <slot /> -->
 	</body>
 </html>
 <style>
-
-html, body{
+	html,
+	body {
 		padding: 0;
 		margin: 0;
 		background-color: #f1efef;
-}
-header{
+	}
+	header {
 		height: 80px;
 		background-color: #f5f106;
 		padding-top: 12px;
-}
+	}
 
-header img{
-	width: 120px;
-}
+	header img {
+		width: 120px;
+	}
 
-header input{
-	box-sizing: border-box;
-	display: inline;
-	width: 80%;
-	padding: 10px 8px;
-	border-top-left-radius: 3px;
-	border-bottom-left-radius: 3px;
-	border: none;
-	height: 36px;
-	/* border: 1px solid #f1efef ; */
-	outline: none;
-}
+	header input {
+		box-sizing: border-box;
+		display: inline;
+		width: 80%;
+		padding: 10px 8px;
+		border-top-left-radius: 3px;
+		border-bottom-left-radius: 3px;
+		border: none;
+		height: 36px;
+		/* border: 1px solid #f1efef ; */
+		outline: none;
+	}
 
-header button{
-	display: inline;
-	width: 32px;
-	border: none;
-	background: #f1efef;
-	height: 36px;
-	border-top-right-radius: 3px;
-	border-bottom-right-radius: 3px;
-}
+	header button {
+		display: inline;
+		width: 32px;
+		border: none;
+		background: #f1efef;
+		height: 36px;
+		border-top-right-radius: 3px;
+		border-bottom-right-radius: 3px;
+	}
 
-.input{
-	display: flex;
-	align-items: center;
-}
+	.input {
+		display: flex;
+		align-items: center;
+	}
 
-.banner{
-	height: 280px;
-	background: linear-gradient(to bottom, #f5f106 60%, #f1efef 100%);
-}
+	/* .banner {
+		height: 280px;
+		background: linear-gradient(to bottom, #f5f106 60%, #f1efef 100%);
+	}  */
 
-.container{
-	max-width: 1200px;
-	margin: 0 auto;
-}
+	/* .container {
+		max-width: 1200px;
+		margin: 0 auto;
+	} */
 
-.cards{
-	gap: 10px;
-	display: flex;
-	margin-top: -80px;
-	height: 180px;
-}
+	.cards {
+		gap: 10px;
+		display: flex;
+		margin-top: -80px;
+		height: 180px;
+	}
 
-.card{
-	flex-grow: 1;
-	background-color: white;
-	border-radius: 6px;
+	.card {
+		flex-grow: 1;
+		background-color: white;
+		border-radius: 6px;
+	}
 
-}
-
-.top-header{
-	column-count: 3;
-}
-
+	.top-header {
+		column-count: 3;
+	}
 </style>
