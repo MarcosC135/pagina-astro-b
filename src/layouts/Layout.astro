@@ -17,34 +17,118 @@ const { title } = Astro.props;
 		<title>{title}</title>
 	</head>
 	<body>
-		<slot />
+		<header>
+			<div class="top-header container">
+				<img src="https://http2.mlstatic.com/frontend-assets/ml-web-navigation/ui-navigation/6.6.82/mercadolibre/logo_large_25years_v2.png">
+				<div class="input">
+					<input placeholder="Buscar productos..." />
+					<button>
+						<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+						<path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+					  </svg>
+					  </button>
+				</div>
+				<span>Publicidad</span>
+			</div>
+
+		</header>
+	    <div class="banner">
+
+	    </div>
+		<div class="container cards">
+			<div class="card">
+				1
+			</div>
+			<div class="card">
+				2
+			</div>
+			<div class="card">
+				3
+			</div>
+			<div class="card">
+				4
+			</div>
+			<div class="card">
+				5
+			</div>
+			<div class="card">
+				6
+			</div>
+		</div>
+		<!-- <slot /> -->
 	</body>
 </html>
-<style is:global>
-	:root {
-		--accent: 136, 58, 234;
-		--accent-light: 224, 204, 250;
-		--accent-dark: 49, 10, 101;
-		--accent-gradient: linear-gradient(
-			45deg,
-			rgb(var(--accent)),
-			rgb(var(--accent-light)) 30%,
-			white 60%
-		);
-	}
-	html {
-		font-family: system-ui, sans-serif;
-		background: #13151a;
-	}
-	code {
-		font-family:
-			Menlo,
-			Monaco,
-			Lucida Console,
-			Liberation Mono,
-			DejaVu Sans Mono,
-			Bitstream Vera Sans Mono,
-			Courier New,
-			monospace;
-	}
+<style>
+
+html, body{
+		padding: 0;
+		margin: 0;
+		background-color: #f1efef;
+}
+header{
+		height: 80px;
+		background-color: #f5f106;
+		padding-top: 12px;
+}
+
+header img{
+	width: 120px;
+}
+
+header input{
+	box-sizing: border-box;
+	display: inline;
+	width: 80%;
+	padding: 10px 8px;
+	border-top-left-radius: 3px;
+	border-bottom-left-radius: 3px;
+	border: none;
+	height: 36px;
+	/* border: 1px solid #f1efef ; */
+	outline: none;
+}
+
+header button{
+	display: inline;
+	width: 32px;
+	border: none;
+	background: #f1efef;
+	height: 36px;
+	border-top-right-radius: 3px;
+	border-bottom-right-radius: 3px;
+}
+
+.input{
+	display: flex;
+	align-items: center;
+}
+
+.banner{
+	height: 280px;
+	background: linear-gradient(to bottom, #f5f106 60%, #f1efef 100%);
+}
+
+.container{
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+.cards{
+	gap: 10px;
+	display: flex;
+	margin-top: -80px;
+	height: 180px;
+}
+
+.card{
+	flex-grow: 1;
+	background-color: white;
+	border-radius: 6px;
+
+}
+
+.top-header{
+	column-count: 3;
+}
+
 </style>
